@@ -2,7 +2,7 @@ package fruit;
 
 public class PeelableFruit extends Fruit implements Peelable{
 	public PeelableFruit(String name, int quantity, boolean isOrganic){
-		super("banana", quantity, isOrganic);
+		super(name, quantity, isOrganic);
 	}
 
 	boolean peeled;

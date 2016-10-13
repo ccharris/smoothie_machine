@@ -9,10 +9,11 @@ public class Main {
 		smoothie.getUserIngredients();
 		smoothie.testValidIngredients(smoothie.ingredients);
 		System.out.println(smoothie.getIngredients());
-		smoothie.getEachFruit(smoothie.validIngredients);
-		smoothie.getAllFruit();
-		Recipe newRecipe = new Recipe(smoothie.getSmoothieName(), smoothie.allfruits);
-		newRecipe.getPrice(smoothie.allfruits);
+		smoothie.getEachIngredient(smoothie.validIngredients);
+		smoothie.getAllIngredients();
+		Recipe newRecipe = new Recipe(smoothie.getSmoothieName(), smoothie.allIngredients);
+		System.out.println(newRecipe.getRecipeInstructs(smoothie.allIngredients));
+		newRecipe.getPrice(smoothie.allIngredients);
 		
 
 	}
