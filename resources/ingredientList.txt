@@ -1,9 +1,9 @@
-*************Ingredient List with Prices Per Portion:**************
+****************Ingredient List with Prices Per Portion:*****************
 Keep in mind, we have organic for each option, for double the price!
-    Berries:          Citrus:      Other Fruit:   Other Ingredients:
-STRAWBERRY (2.50)  ORANGE (1.00)   BANANA (2.00)    SPINACH (1.50)
-BLUEBERRY (1.50)   LEMON (0.75)    APPLE (1.50)     YOGURT (2.00)
-RASPBERRY (2.00)   LIME (0.50)     PEACH (2.00)     ICE (0.00)
-                                   PEAR (3.00)      PROTEIN(1.00)
-                                   PINEAPPLE (3.00)
-                                   CHERRY (1.00)
+    Berries:           Citrus:        Other Fruit:     Other Ingredients:
+STRAWBERRY (2.50) | ORANGE (1.00) | BANANA (2.00)    |  SPINACH (1.50)
+BLUEBERRY (1.50)  | LEMON (0.75)  | APPLE (1.50)     |  YOGURT (2.00)
+RASPBERRY (2.00)  | LIME (0.50)   | PEACH (2.00)     |  ICE (0.00)
+                                  | PEAR (3.00)      |  PROTEIN(1.00)
+                                  | PINEAPPLE (3.00) |
+                                  | CHERRY (1.00)    |

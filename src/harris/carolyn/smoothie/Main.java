@@ -14,8 +14,6 @@ public class Main {
 		Recipe newRecipe = new Recipe(smoothie.getSmoothieName(), smoothie.allIngredients);
 		System.out.println(newRecipe.getRecipeInstructs(smoothie.allIngredients));
 		newRecipe.getPrice(smoothie.allIngredients);
-		
-
 	}
 
 }

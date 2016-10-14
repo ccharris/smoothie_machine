@@ -33,16 +33,16 @@ public class Machine {
 	public Machine() {
 		System.out.println("Welcome to the smoothie machine!");
 	}
-
+//print ingredients possible from a text file
 	void printIngredients() {
 		BufferedReader reader = null;
+		List<String> ingredients = new ArrayList<String>();
 		try {
 			reader = new BufferedReader(new FileReader("resources/ingredientList.txt"));
 			String line;
 			while ((line = reader.readLine()) != null) {
 				System.out.println(line);
 			}
-
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
@@ -53,7 +53,7 @@ public class Machine {
 			}
 		}
 	}
-
+//print all the recipes
 	void printRecipes() {
 		System.out.println("Would you like to see some suggested recipes?");
 		Scanner rResponse = new Scanner(System.in);
@@ -80,7 +80,7 @@ public class Machine {
 			System.out.println("Okay, go ahead and be creative!");
 		}
 	}
-
+//take user input to decide which ingredients they want in their smoothie
 	void getUserIngredients() {
 		Scanner userIn = new Scanner(System.in);
 		String recipeDecide = "";
@@ -131,7 +131,7 @@ public class Machine {
 			
 		}
 	}
-
+//creates a list of enum names
 	public List<String> ingredientsEnums() {
 		List<String> fruitEnums = new ArrayList<String>();
 		for (IngredientTypes type : IngredientTypes.values()) {
@@ -139,7 +139,7 @@ public class Machine {
 		}
 		return fruitEnums;
 	}
-
+//see if ingredient is one in the enums
 	void testValidIngredients(Collection<String> ingredients) {
 		for (String ingredient : ingredients) {
 			if (ingredientsEnums().contains(ingredient.toUpperCase())) {
@@ -149,11 +149,11 @@ public class Machine {
 			}
 		}
 	}
-
+//get the ingredients
 	Collection<String> getIngredients() {
 		return validIngredients;
 	}
-
+// get each ingredient as separate fruit to later create a class from user input
 	public void getEachIngredient(List<String> validIngredients) {
 		for (int i = 0; i < validIngredients.size(); i++) {
 			if (i == 0) {
@@ -168,7 +168,7 @@ public class Machine {
 
 		}
 	}
-
+// create ingredient class depending on information, that you get from the user
 	public Food getIngredientParams(String ingredient) {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("How many portions of " + ingredient + " would you like?");
@@ -202,6 +202,7 @@ public class Machine {
 		return food;
 	}
 
+	//adds all ingredients to a collection
 	public Collection<Food> getAllIngredients() {
 		if (fruit1 != null) {
 			allIngredients.add(getIngredientParams(fruit1));
@@ -215,11 +216,10 @@ public class Machine {
 		if (fruit4 != null) {
 			allIngredients.add(getIngredientParams(fruit4));
 		}
-
 		return allIngredients;
-
 	}
 
+	//get smoothie name, ask if they want to use a pre-made recipe, or create their own
 	public String getSmoothieName() {
 		if (!recipeChoose) {
 			System.out.println("What do you want your smoothie to be called?");
